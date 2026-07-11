@@ -1,12 +1,11 @@
-package com.symplifica.backenda.dto;
+package com.symplifica.backend.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public record EmployeeRequest(
-     @NotBlank(message = "El email es obligatorio")
+        @NotBlank(message = "El email es obligatorio")
         @Email(message = "El email no tiene un formato válido")
         String email,
 
@@ -24,5 +23,14 @@ public record EmployeeRequest(
         String jobTitle,
 
         @NotBlank(message = "La ciudad es obligatoria")
-        String city
+        String city,
+
+        @NotBlank(message = "La calle es obligatoria")
+        String street,
+
+        @NotBlank(message = "El departamento es obligatorio")
+        String state,
+
+        @NotBlank(message = "El pais es obligatorio")
+        String country
 )   {}

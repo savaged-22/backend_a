@@ -10,6 +10,9 @@ public record EmployeeResponse(
     String lastName,
     String jobTitle,
     String city,
+    String street,
+    String state,
+    String country,
     LocalDateTime createdAt,
     LocalDateTime updatedAt
 ) {
@@ -21,6 +24,9 @@ public record EmployeeResponse(
                 employee.getLastName(),
                 employee.getJobTitle(),
                 employee.getCity(),
+                employee.getStreet(),
+                employee.getState(),
+                employee.getCountry(),
                 employee.getCreatedAt(),
                 employee.getUpdatedAt());
     }
